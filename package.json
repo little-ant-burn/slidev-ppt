@@ -1,21 +1,37 @@
 {
   "name": "slidev-ppt",
-  "version": "1.0.0",
-  "description": "Slidev presentation project for creating beautiful PPTs",
+  "version": "2.0.0",
+  "description": "Slidev presentation - 2026年热门GitHub开源项目精选",
   "scripts": {
     "dev": "slidev",
     "build": "slidev build",
     "export": "slidev export",
     "export:pdf": "slidev export --format pdf",
     "export:png": "slidev export --format png",
-    "format": "slidev format"
+    "format": "slidev format",
+    "preview": "npm run build && npx serve dist"
   },
   "dependencies": {
-    "@slidev/cli": "^0.52.14",
+    "@slidev/cli": "^52.14.0",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/theme-seriph": "^0.25.0"
   },
   "devDependencies": {
     "playwright-chromium": "^1.51.0"
+  },
+  "keywords": [
+    "slidev",
+    "presentation",
+    "github",
+    "opensource",
+    "ai",
+    "mcp",
+    "2026"
+  ],
+  "author": "little-ant-burn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/little-ant-burn/slidev-ppt.git"
   }
 }
