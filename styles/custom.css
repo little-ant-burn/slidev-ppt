@@ -1,251 +1,159 @@
-/* Custom Styles for Slidev PPT - 2026 Edition */
-/* AI Tech Theme - Dark mode with gradient accents */
+/* Custom Styles for Slidev PPT - 2026 Edition v2 */
+/* Enhanced Visual Effects */
 
-/* ===== Base Variables ===== */
-:root {
-  --slidev-theme-primary: #6366f1;
-  --slidev-theme-secondary: #a855f7;
-  --slidev-theme-accent: #06b6d4;
-  --slidev-theme-background: #0f172a;
-  --slidev-theme-background-code: #1e293b;
-  --slidev-theme-text: #f8fafc;
-  --slidev-theme-text-muted: #94a3b8;
-}
-
-/* ===== Global Styles ===== */
-.slidev-layout {
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
-  color: var(--slidev-theme-text);
-}
-
-/* ===== Cover Page ===== */
-.slidev-layout.cover {
-  background: 
-    radial-gradient(ellipse at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-}
-
-.slidev-layout.cover h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #fff 0%, #c7d2fe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
-}
-
-.slidev-layout.cover h2 {
-  color: var(--slidev-theme-text-muted);
-  font-weight: 400;
-  font-size: 1.5rem;
-}
-
-/* ===== Headings ===== */
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, #c7d2fe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--slidev-theme-secondary);
-  margin-bottom: 0.8rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--slidev-theme-accent);
-}
-
-/* ===== Code Blocks ===== */
-.slidev-code {
-  background: var(--slidev-theme-background-code) !important;
-  border-radius: 12px !important;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(99, 102, 241, 0.1);
-}
-
-.slidev-code pre {
-  background: transparent !important;
-}
-
-.slidev-code code {
-  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
-  font-size: 0.85rem;
-  line-height: 1.6;
-}
-
-/* Inline code */
-code {
-  background: rgba(99, 102, 241, 0.15);
-  color: #c7d2fe;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-size: 0.9em;
-}
-
-/* ===== Lists ===== */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.6rem;
-  line-height: 1.6;
-}
-
-ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6rem;
-  width: 6px;
-  height: 6px;
-  background: linear-gradient(135deg, var(--slidev-theme-primary), var(--slidev-theme-secondary));
-  border-radius: 50%;
-}
-
-/* ===== Grid Layouts ===== */
-.grid {
-  gap: 1.5rem;
-}
-
-.grid > div {
-  background: rgba(30, 41, 59, 0.5);
-  border-radius: 12px;
-  padding: 1.5rem;
-  border: 1px solid rgba(99, 102, 241, 0.1);
-  transition: all 0.3s ease;
-}
-
-.grid > div:hover {
-  border-color: rgba(99, 102, 241, 0.3);
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
-}
-
-/* ===== Summary Cards ===== */
-.grid.grid-cols-3 > div {
+/* ===== Project Card ===== */
+.project-card {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
   border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.grid.grid-cols-3 h3 {
-  color: #fff;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2);
 }
 
-/* ===== Buttons & Interactive Elements ===== */
-.icon-btn {
-  background: rgba(99, 102, 241, 0.2);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+/* ===== Feature Item ===== */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: rgba(30, 41, 59, 0.5);
   border-radius: 8px;
-  padding: 0.5rem;
+  border-left: 3px solid rgba(99, 102, 241, 0.5);
   transition: all 0.3s ease;
 }
 
-.icon-btn:hover {
+.feature-item:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-left-color: rgba(99, 102, 241, 1);
+}
+
+.feature-icon {
+  font-size: 1.25rem;
+}
+
+/* ===== Stats Card ===== */
+.stats-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stats-card.highlight {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+  border-color: rgba(236, 72, 153, 0.3);
+  box-shadow: 0 0 30px rgba(236, 72, 153, 0.2);
+}
+
+/* ===== Tip & Warning Cards ===== */
+.tip-card {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.warning-card {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* ===== Bar Chart ===== */
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.bar {
+  width: 60px;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.bar-label {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+/* ===== Category Cards ===== */
+.category-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+}
+
+.category-card.ai {
+  border-top: 4px solid #6366f1;
+}
+
+.category-card.privacy {
+  border-top: 4px solid #06b6d4;
+}
+
+.category-card.automation {
+  border-top: 4px solid #f59e0b;
+}
+
+.recommendation {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 8px;
+}
+
+/* ===== Social Links ===== */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(99, 102, 241, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 9999px;
+  color: #c7d2fe;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
   background: rgba(99, 102, 241, 0.4);
   transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
 }
 
-/* Click to navigate button */
-span.cursor-pointer {
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-/* ===== Tables ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-}
-
-th {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(168, 85, 247, 0.3) 100%);
-  color: #fff;
-  font-weight: 600;
-  padding: 0.75rem 1rem;
-  text-align: left;
-  border-bottom: 2px solid rgba(99, 102, 241, 0.5);
-}
-
-td {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
-}
-
-tr:hover td {
-  background: rgba(99, 102, 241, 0.05);
-}
-
-/* ===== Links ===== */
-a {
-  color: var(--slidev-theme-accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #22d3ee;
-  text-decoration: underline;
-}
-
-/* ===== Blockquotes ===== */
-blockquote {
-  border-left: 4px solid var(--slidev-theme-primary);
-  background: rgba(99, 102, 241, 0.1);
-  padding: 1rem 1.5rem;
-  margin: 1rem 0;
-  border-radius: 0 8px 8px 0;
-  font-style: italic;
-  color: var(--slidev-theme-text-muted);
-}
-
-/* ===== Emojis in headings ===== */
-h2 [class*="icon"],
-h2 [class*="emoji"] {
-  display: inline-block;
-  margin-right: 0.5rem;
-  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
-}
-
-/* ===== GitHub Stars Badge ===== */
-[data-stars]::after {
-  content: attr(data-stars);
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #000;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-left: 0.5rem;
-}
-
-/* ===== Animations ===== */
+/* ===== Animation Enhancements ===== */
 @keyframes pulse-glow {
   0%, 100% {
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
   }
 }
 
@@ -253,69 +161,91 @@ h2 [class*="emoji"] {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* ===== Print / PDF Export ===== */
-@media print {
-  .slidev-layout {
-    background: #0f172a !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
+/* ===== Slide Transitions ===== */
+.slidev-layout {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
 }
 
-/* ===== Syntax Highlighting Customization ===== */
-.token.comment {
-  color: #64748b;
-  font-style: italic;
-}
-
-.token.string {
-  color: #86efac;
-}
-
-.token.keyword {
-  color: #c4b5fd;
-  font-weight: 600;
-}
-
-.token.function {
-  color: #67e8f9;
-}
-
-.token.number {
-  color: #fca5a5;
-}
-
-.token.operator {
-  color: #fbbf24;
-}
-
-/* ===== Responsive Adjustments ===== */
-@media (max-width: 1024px) {
-  .grid.grid-cols-2 {
-    grid-template-columns: 1fr;
-  }
-  
-  .grid.grid-cols-3 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===== Custom Utility Classes ===== */
-.text-gradient {
-  background: linear-gradient(135deg, var(--slidev-theme-primary) 0%, var(--slidev-theme-secondary) 100%);
+/* ===== Typography Enhancements ===== */
+h1 {
+  background: linear-gradient(135deg, #fff 0%, #c7d2fe 50%, #a78bfa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.bg-glass {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+/* ===== Code Block Enhancements ===== */
+.slidev-code {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
 }
 
-.border-gradient {
-  border: 1px solid transparent;
-  background: linear-gradient(var(--slidev-theme-background), var(--slidev-theme-background)) padding-box,
-              linear-gradient(135deg, var(--slidev-theme-primary), var(--slidev-theme-secondary)) border-box;
+/* ===== List Enhancements ===== */
+ul li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border-radius: 50%;
+}
+
+/* ===== Table Enhancements ===== */
+th {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.4) 0%, rgba(168, 85, 247, 0.4) 100%);
+}
+
+/* ===== Print / PDF Export ===== */
+@media print {
+  .project-card,
+  .stats-card,
+  .category-card {
+    break-inside: avoid;
+  }
+}
+
+/* ===== Export Button Styles ===== */
+.export-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.export-btn-primary {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2) 0%, rgba(249, 115, 22, 0.2) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+.export-btn-primary:hover {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(249, 115, 22, 0.3) 100%);
+  border-color: rgba(239, 68, 68, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.2);
+}
+
+.export-btn-secondary {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #c7d2fe;
+}
+
+.export-btn-secondary:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(168, 85, 247, 0.3) 100%);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
 }
