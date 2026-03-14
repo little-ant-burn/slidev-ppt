@@ -39,6 +39,18 @@ info: |
     <span>开始探索</span>
     <carbon:arrow-right />
   </div>
+  
+  <!-- 导出按钮 -->
+  <div class="mt-6 flex justify-center gap-4">
+    <a href="./slides-export.pdf" download class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white/20 hover:text-white transition-all">
+      <carbon:document-pdf />
+      <span>下载 PDF</span>
+    </a>
+    <a href="https://github.com/little-ant-burn/slidev-ppt/releases/tag/pdf-latest" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm text-gray-300 hover:bg-white/20 hover:text-white transition-all">
+      <carbon:download />
+      <span>获取最新版</span>
+    </a>
+  </div>
 </div>
 
 <!--
@@ -511,6 +523,18 @@ class: text-center
     <a href="https://github.com/little-ant-burn" target="_blank" class="social-link">
       <carbon:user-avatar class="text-2xl" />
       <span>Profile</span>
+    </a>
+  </div>
+  
+  <!-- 导出按钮 -->
+  <div class="flex justify-center gap-4 mb-8">
+    <a href="./slides-export.pdf" download class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-full text-red-300 hover:bg-gradient-to-r hover:from-red-500/30 hover:to-orange-500/30 hover:border-red-400/50 transition-all">
+      <carbon:document-pdf class="text-xl" />
+      <span>下载 PDF 幻灯片</span>
+    </a>
+    <a href="https://github.com/little-ant-burn/slidev-ppt/releases/tag/pdf-latest" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-full text-indigo-300 hover:bg-gradient-to-r hover:from-indigo-500/30 hover:to-purple-500/30 hover:border-indigo-400/50 transition-all">
+      <carbon:download class="text-xl" />
+      <span>获取最新版本</span>
     </a>
   </div>
   
