@@ -41,6 +41,9 @@ jobs:
       - name: Export PDF
         run: npm run export:pdf
         
+      - name: Copy PDF to dist
+        run: cp slides-export.pdf dist/slides-export.pdf
+        
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
@@ -53,9 +56,6 @@ jobs:
         with:
           path: dist
           
-      - name: Copy PDF to dist
-        run: cp slides-export.pdf dist/slides-export.pdf
-        
   deploy:
     environment:
       name: github-pages
@@ -77,6 +77,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: slidev-ppt-pdf
+          
+      - name: Delete existing release
+        run: gh release delete pdf-latest --yes || true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Upload PDF to Release
         uses: softprops/action-gh-release@v1
